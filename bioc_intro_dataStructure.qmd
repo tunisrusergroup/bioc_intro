@@ -8,10 +8,7 @@ format:
     toc-title: "Contents"
     toc-depth: 3
     number-sections: true
-  pdf:
-    toc: true
-    number-sections: true
-    pdf-engine: xelatex
+output: markdown
 editor: visual
 ---
 
@@ -23,29 +20,30 @@ We are going to use part of the data published by [Blackmore *et al.* (2017)](ht
 
 The dataset is stored as a comma-separated values (CSV) file. Each row holds information for a single RNA expression measurement, and the first eleven columns represent:
 
-| **Column** | **Description**                                            |
-|------------|------------------------------------------------------------|
-| gene       | The name of the gene that was measured                     |
-| sample     | The name of the sample the gene expression was measured in |
-| expression |                                                            |
-| organism   |                                                            |
-| age        |                                                            |
-| sex        |                                                            |
-| infection  |                                                            |
-| strain     |                                                            |
-| time       |                                                            |
-| tissue     |                                                            |
-| mouse      |                                                            |
+| **Column** | **Description** |
+|----------------|--------------------------------------------------------|
+| gene | The name of the gene that was measured |
+| sample | The name of the sample the gene expression was measured in |
+| expression | The value of the gene expression |
+| organism | The organism/species - here all data stem from mice |
+| age | The age of the mouse (all mice were 8 weeks here) |
+| sex | The sex of the mouse |
+| infection | The infection state of the mouse, i.e. infected with Influenza A or not infected. |
+| strain | The Influenza A strain. |
+| time | The duration of the infection (in days). |
+| tissue | The tissue that was used for the gene expression experiment, i.e. cerebellum or spinal cord. |
+| mouse | The mouse unique identifier. |
 
 ```{r}
 #| label: load-library
+#| output: false
 # Load library here
 library(here)
 ```
 
 ```{r}
 #| label: load-data
-#| output: fold
+#| output: false
 # Define the full path for the destination file
 dest_path <- here("data", "rnaseq.csv")
 
@@ -75,7 +73,7 @@ ifelse(
 
 ```{r}
 #| label: read-data
-#| output: fold
+#| output: false
 # Load the CSV file
 rna <- read.csv(dest_path)
 # Have a look at the CSV file
@@ -86,7 +84,7 @@ Let’s check the top (the first 6 lines) of this data frame using the function 
 
 ```{r}
 #| label: read-head
-#| output: fold
+#| output: false
 head(rna)
 ```
 
@@ -115,7 +113,6 @@ We can see this when inspecting the **str**ucture of a data frame with the funct
 
 ```{r}
 #| label: explore-data
-#| output: fold
 str(rna)
 ```
 
@@ -171,7 +168,7 @@ Our `rna` data frame has rows and columns (it has 2 dimensions); if we want to e
 
 ```{r}
 #| label: index-df
-#| output: fold
+#| output: false
 # first element in the first column of the data frame (as a vector)
 rna[1, 1]
 # first element in the 6th column (as a vector)
@@ -195,7 +192,7 @@ You can also exclude certain indices of a data frame using the “`-`” sign:
 
 ```{r}
 #| label: index-df1
-#| output: fold
+#| output: false
 rna[, -1]          ## The whole data frame, except the first column
 rna[-c(7:66465), ] ## Equivalent to head(rna)
 ```
@@ -204,7 +201,7 @@ Data frames can be subsetted by calling indices (as shown previously), but also 
 
 ```{r}
 #| label: subset-df
-#| output: fold
+#| output: false
 rna["gene"]       # Result is a data.frame
 rna[, "gene"]     # Result is a vector
 rna[["gene"]]     # Result is a vector
@@ -445,7 +442,7 @@ dmy(paste(x$day, x$month, x$year, sep = "-"))
 
 `lubdridate` has many functions to address all date variations.
 
-::: {.callout-note}
+::: callout-note
 **Summary of R objects**
 
 So far, we have seen several types of R object varying in the number of dimensions and whether they could store a single or multiple data types:
@@ -455,7 +452,6 @@ So far, we have seen several types of R object varying in the number of dimensio
 -   **`matrix`**: two dimensions, single type of data.
 
 -   **`data.frame`**: two dimensions, one type per column.
-
 :::
 
 ### **Lists**
