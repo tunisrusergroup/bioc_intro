@@ -21,7 +21,7 @@ We are going to use part of the data published by [Blackmore *et al.* (2017)](ht
 The dataset is stored as a comma-separated values (CSV) file. Each row holds information for a single RNA expression measurement, and the first eleven columns represent:
 
 | **Column** | **Description** |
-|----|----|
+|------------------------------------|------------------------------------|
 | gene | The name of the gene that was measured |
 | sample | The name of the sample the gene expression was measured in |
 | expression | The value of the gene expression |
@@ -360,6 +360,8 @@ Using the function `installed.packages()`, create a `character` matrix containin
 It is often useful to create large random data matrices as test data. The exercise below asks you to create such a matrix with random data drawn from a normal distribution of mean 0 and standard deviation 1, which can be done with the `rnorm()` function.
 
 ::: callout-caution
+## Challenge
+
 Construct a matrix of dimension 1000 by 3 of normally distributed data (mean 0, standard deviation 1)
 :::
 
