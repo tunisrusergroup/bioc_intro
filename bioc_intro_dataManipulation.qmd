@@ -53,7 +53,9 @@ rna <- read_csv("data/rnaseq.csv")
 rna
 ```
 
+::: callout-important
 Notice that the class of the data is now referred to as a “tibble”.
+:::
 
 Tibbles tweak some of the behaviors of the data frame objects we introduced in the previously. The data structure is very similar to a data frame. For our purposes the only differences are that:
 
@@ -439,7 +441,9 @@ In the opposite situation we are using the column names and turning them into a 
 
 To recreate `rna_long` from `rna_wide` we would create a key called `sample` and value called `expression` and use all columns except `gene` for the key variable. Here we drop `gene` column with a minus sign.
 
+::: callout-important
 Notice how the new variable names are to be quoted here.
+:::
 
 ```{r}
 rna_long <- rna_wide %>%
@@ -465,7 +469,9 @@ rna_wide %>%
                  GSM2545336:GSM2545380)
 ```
 
+::: callout-important
 Note that if we had missing values in the wide-format, the `NA` would be included in the new long format.
+:::
 
 Remember our previous fictive tibble containing missing values:
 
