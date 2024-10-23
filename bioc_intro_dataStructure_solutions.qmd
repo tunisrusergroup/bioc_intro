@@ -8,7 +8,7 @@ format:
     toc-title: "Contents"
     toc-depth: 3
     number-sections: true
-output: markdown
+output: html
 editor: visual
 ---
 
