@@ -42,7 +42,7 @@ This course assumes that participants:
 
 | Day | Time | Session |
 |------------------------|------------------------|------------------------|
-| **Day 1** | **Morning** | Introduction to R and RStudio, [Data Structure](bioc_intro_dataStructure_solutions.qmd) |
+| **Day 1** | **Morning** | Data organisation with spreadsheets, Introduction to R and RStudio |
 |  | **Afternoon** | [Data Structure](bioc_intro_dataStructure_solutions.qmd), [Data Manipulation](bioc_intro_dataManipulation_solutions.qmd) |
 | **Day 2** | **Morning** | [Data Manipulation, Data Visualization](bioc_intro_dataManipulation_solutions.qmd) |
 |  | **Afternoon** | [Data Visualization](bioc_intro_dataVisualization_solutions.qmd) |
