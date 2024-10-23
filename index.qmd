@@ -1,0 +1,54 @@
+---
+title: "Introduction to Data Analysis with R and Bioconductor"
+format: html
+editor: visual
+---
+
+# Introduction to Data Analysis with R and Bioconductor
+
+Welcome to this Carpentries-style course designed to introduce you to the fundamentals of data analysis using **R** and **Bioconductor**. This course will guide you through working with data, manipulating it effectively, and visualizing it to gain insights in the context of **bioinformatics**.
+
+## Course Overview
+
+In this course, we will cover:
+
+-   The **data structures** in R and how to navigate them.
+-   Techniques for **manipulating data** using tools from the `tidyverse`, like `dplyr` and `tibble`.
+-   How to create **visualizations** with `ggplot2` to represent data in meaningful ways.
+
+This course is tailored for those new to R and Bioconductor but assumes some familiarity with bioinformatics concepts.
+
+## Learning Goals
+
+By the end of this course, you will be able to:
+
+-   Understand and work with various data structures in R.
+-   Perform data manipulation tasks using `dplyr` and `tidyverse` tools.
+-   Visualize data using `ggplot2` and understand how to interpret the results.
+-   Use Bioconductor packages to perform bioinformatics analyses.
+
+## Prerequisites
+
+This course assumes that participants:
+
+-   Have basic knowledge of bioinformatics (though not required).
+-   Have some familiarity with programming concepts, preferably with **R**.
+
+## Course Materials
+
+-   [Course Repository (GitHub)](https://github.com/your-repo-link) – Contains all the materials and code examples used in this course.
+-   Datasets for the course will be provided within the lessons.
+-   Additional reading: [R for Data Science](https://r4ds.had.co.nz/) and [Bioconductor Documentation](https://bioconductor.org/docs/).
+
+## Course Outline
+
+| Day | Time | Session |
+|---------------|---------------|------------------------------------------|
+| **Day 1** | **Morning** | Introduction to R and RStudio, [Data Structure](bioc_intro_dataStructure_solutions.qmd) |
+|  | **Afternoon** | [Data Structure](bioc_intro_dataStructure_solutions.qmd), [Data Manipulation](bioc_intro_dataManipulation_solutions.qmd) |
+| **Day 2** | **Morning** | [Data Manipulation, Data Visualization](bioc_intro_dataManipulation_solutions.qmd) |
+|  | **Afternoon** | [Data Visualization](bioc_intro_dataVisualization_solutions.qmd) |
+
+## Contact
+
+If you have any questions during the course, feel free to reach out to the course instructor.

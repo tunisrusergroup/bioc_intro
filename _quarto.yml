@@ -1,0 +1,20 @@
+project:
+  type: website
+  output-dir: _site  # Output directory for the website
+
+website:
+  title: "Introduction to Data Analysis with R and Bioconductor"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Data Structure"
+        href: bioc_intro_dataStructure_solutions.qmd
+      - text: "Data Manipulation"
+        href: bioc_intro_dataManipulation_solutions.qmd
+      - text: "Data Visualization"
+        href: bioc_intro_dataVisualization_solutions.qmd
+format:
+  html:
+    toc: true  # Enables table of contents for each page
+    theme: cosmo  # You can use other themes like flatly, cerulean, etc.
