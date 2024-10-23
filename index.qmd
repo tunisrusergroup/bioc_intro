@@ -4,8 +4,6 @@ format: html
 editor: visual
 ---
 
-# Introduction to Data Analysis with R and Bioconductor
-
 Welcome to this Carpentries-style course designed to introduce you to the fundamentals of data analysis using **R** and **Bioconductor**. This course will guide you through working with data, manipulating it effectively, and visualizing it to gain insights in the context of **bioinformatics**.
 
 ## Course Overview
@@ -43,7 +41,7 @@ This course assumes that participants:
 ## Course Outline
 
 | Day | Time | Session |
-|---------------|---------------|------------------------------------------|
+|------------------------|------------------------|------------------------|
 | **Day 1** | **Morning** | Introduction to R and RStudio, [Data Structure](bioc_intro_dataStructure_solutions.qmd) |
 |  | **Afternoon** | [Data Structure](bioc_intro_dataStructure_solutions.qmd), [Data Manipulation](bioc_intro_dataManipulation_solutions.qmd) |
 | **Day 2** | **Morning** | [Data Manipulation, Data Visualization](bioc_intro_dataManipulation_solutions.qmd) |

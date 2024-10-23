@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: _site  # Output directory for the website
+  output-dir: docs  # Output directory set to docs  
 
 website:
   title: "Introduction to Data Analysis with R and Bioconductor"
