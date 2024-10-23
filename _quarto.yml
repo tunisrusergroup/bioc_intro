@@ -8,6 +8,8 @@ website:
     left:
       - text: "Home"
         href: index.qmd
+      - text: "Introduction to R"
+        href: bioc_intro_Introduction2R_solutions.qmd 
       - text: "Data Structure"
         href: bioc_intro_dataStructure_solutions.qmd
       - text: "Data Manipulation"
