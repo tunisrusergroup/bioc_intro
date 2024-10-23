@@ -9,7 +9,7 @@
 <meta name="author" content="The Carpenteries">
 <meta name="dcterms.date" content="2024-10-23">
 
-<title>Data Visualization – Introduction to Data Analysis with R and Bioconductor</title>
+<title>Data Visualization using ggplot2 – Introduction to Data Analysis with R and Bioconductor</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -128,6 +128,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./bioc_intro_Introduction2R_solutions.html"> 
+<span class="menu-text">Introduction to R</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./bioc_intro_dataStructure_solutions.html"> 
 <span class="menu-text">Data Structure</span></a>
   </li>  
@@ -176,7 +180,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Visualization</h1>
+<h1 class="title">Data Visualization using ggplot2</h1>
 </div>
 
 
@@ -205,6 +209,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Objectives</strong></p>
+<ul>
+<li><p>Produce scatter plots, boxplots, line plots, etc. using ggplot.</p></li>
+<li><p>Set universal plot settings.</p></li>
+<li><p>Describe what faceting is and apply faceting in ggplot.</p></li>
+<li><p>Modify the aesthetics of an existing ggplot plot (including axis labels and color).</p></li>
+<li><p>Build complex and customized plots from data in a data frame.</p></li>
+</ul>
+</div>
+</div>
+</div>
 <section id="data-visualization" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="data-visualization"><span class="header-section-number">1</span> <strong>Data Visualization</strong></h2>
 <p>We start by loading the required packages. <strong><code>ggplot2</code></strong> is included in the <strong><code>tidyverse</code></strong> package.</p>
@@ -619,7 +640,7 @@ Answer
 <div class="cell-output cell-output-stdout">
 <pre><code>
 The downloaded binary packages are in
-    /var/folders/6v/qms_hkh14rqbc_q9c29yjk3m0000gn/T//RtmpnGCs3W/downloaded_packages</code></pre>
+    /var/folders/6v/qms_hkh14rqbc_q9c29yjk3m0000gn/T//RtmpR3euAJ/downloaded_packages</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -1423,7 +1444,7 @@ Answer
 <div class="cell-output cell-output-stdout">
 <pre><code>
 The downloaded binary packages are in
-    /var/folders/6v/qms_hkh14rqbc_q9c29yjk3m0000gn/T//RtmpnGCs3W/downloaded_packages</code></pre>
+    /var/folders/6v/qms_hkh14rqbc_q9c29yjk3m0000gn/T//RtmpR3euAJ/downloaded_packages</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -1497,7 +1518,7 @@ The downloaded binary packages are in
 <div class="cell-output cell-output-stdout">
 <pre><code>
 The downloaded binary packages are in
-    /var/folders/6v/qms_hkh14rqbc_q9c29yjk3m0000gn/T//RtmpnGCs3W/downloaded_packages</code></pre>
+    /var/folders/6v/qms_hkh14rqbc_q9c29yjk3m0000gn/T//RtmpR3euAJ/downloaded_packages</code></pre>
 </div>
 </div>
 <div class="cell">

@@ -1,5 +1,5 @@
 ---
-title: "Data Visualization"
+title: "Data Visualization using ggplot2"
 author: "The Carpenteries"
 date: "`r format(Sys.Date(), '%Y-%m-%d')`"
 format:
@@ -11,6 +11,21 @@ format:
 output: markdown
 editor: visual
 ---
+
+:::{.callout}
+**Objectives**
+
+-   Produce scatter plots, boxplots, line plots, etc. using ggplot.
+
+-   Set universal plot settings.
+
+-   Describe what faceting is and apply faceting in ggplot.
+
+-   Modify the aesthetics of an existing ggplot plot (including axis labels and color).
+
+-   Build complex and customized plots from data in a data frame.
+
+:::
 
 ## **Data Visualization**
 

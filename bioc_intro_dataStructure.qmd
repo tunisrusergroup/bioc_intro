@@ -1,5 +1,5 @@
 ---
-title: "Introduction to data analysis with R and Bioconductor"
+title: "Introduction to data structure in R (suite)"
 author: "The Carpenteries"
 date: "`r format(Sys.Date(), '%Y-%m-%d')`"
 format:
@@ -11,6 +11,27 @@ format:
 output: html
 editor: visual
 ---
+
+:::{.callout}
+**Objectives**
+
+-   Describe what a `data.frame` is.
+
+-   Load external data from a .csv file into a data frame.
+
+-   Summarize the contents of a data frame.
+
+-   Describe what a factor is.
+
+-   Convert between strings and factors.
+
+-   Reorder and rename factors.
+
+-   Format dates.
+
+-   Export and save data.
+
+:::
 
 ## Starting with data
 

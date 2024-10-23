@@ -9,7 +9,7 @@
 <meta name="author" content="The Carpenteries">
 <meta name="dcterms.date" content="2024-10-23">
 
-<title>Introduction to data analysis with R and Bioconductor – Introduction to Data Analysis with R and Bioconductor</title>
+<title>Introduction to data structure in R (suite) – Introduction to Data Analysis with R and Bioconductor</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -128,6 +128,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./bioc_intro_Introduction2R_solutions.html"> 
+<span class="menu-text">Introduction to R</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link active" href="./bioc_intro_dataStructure_solutions.html" aria-current="page"> 
 <span class="menu-text">Data Structure</span></a>
   </li>  
@@ -174,7 +178,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction to data analysis with R and Bioconductor</h1>
+<h1 class="title">Introduction to data structure in R (suite)</h1>
 </div>
 
 
@@ -203,6 +207,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Objectives</strong></p>
+<ul>
+<li><p>Describe what a <code>data.frame</code> is.</p></li>
+<li><p>Load external data from a .csv file into a data frame.</p></li>
+<li><p>Summarize the contents of a data frame.</p></li>
+<li><p>Describe what a factor is.</p></li>
+<li><p>Convert between strings and factors.</p></li>
+<li><p>Reorder and rename factors.</p></li>
+<li><p>Format dates.</p></li>
+<li><p>Export and save data.</p></li>
+</ul>
+</div>
+</div>
+</div>
 <section id="starting-with-data" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="starting-with-data"><span class="header-section-number">1</span> Starting with data</h2>
 <section id="presentation-of-the-gene-expression-data" class="level3" data-number="1.1">
@@ -785,208 +809,224 @@ Answer
 <div class="cell-output cell-output-stdout">
 <pre><code>              Package        
 abind         "abind"        
+admisc        "admisc"       
 annotate      "annotate"     
 AnnotationDbi "AnnotationDbi"
 AnnotationHub "AnnotationHub"
-AsioHeaders   "AsioHeaders"  
-askpass       "askpass"      
+aplot         "aplot"        
               LibPath                                                               
 abind         "/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library"
+admisc        "/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library"
 annotate      "/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library"
 AnnotationDbi "/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library"
 AnnotationHub "/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library"
-AsioHeaders   "/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library"
-askpass       "/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library"
-              Version    Priority
-abind         "1.4-5"    NA      
-annotate      "1.80.0"   NA      
-AnnotationDbi "1.64.1"   NA      
-AnnotationHub "3.10.0"   NA      
-AsioHeaders   "1.22.1-2" NA      
-askpass       "1.2.0"    NA      
+aplot         "/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library"
+              Version  Priority
+abind         "1.4-8"  NA      
+admisc        "0.36"   NA      
+annotate      "1.80.0" NA      
+AnnotationDbi "1.64.1" NA      
+AnnotationHub "3.10.0" NA      
+aplot         "0.2.3"  NA      
               Depends                                                                                 
 abind         "R (&gt;= 1.5.0)"                                                                          
+admisc        "R (&gt;= 3.5.0)"                                                                          
 annotate      "R (&gt;= 2.10), AnnotationDbi (&gt;= 1.27.5), XML"                                           
 AnnotationDbi "R (&gt;= 2.7.0), methods, stats4, BiocGenerics (&gt;= 0.29.2),\nBiobase (&gt;= 1.17.0), IRanges"
 AnnotationHub "BiocGenerics (&gt;= 0.15.10), BiocFileCache (&gt;= 1.5.1)"                                   
-AsioHeaders   NA                                                                                      
-askpass       NA                                                                                      
+aplot         "R (&gt;= 4.1.0)"                                                                          
               Imports                                                                                                                                                           
 abind         "methods, utils"                                                                                                                                                  
+admisc        "methods"                                                                                                                                                         
 annotate      "Biobase, DBI, xtable, graphics, utils, stats, methods,\nBiocGenerics (&gt;= 0.13.8), httr"                                                                          
 AnnotationDbi "DBI, RSQLite, S4Vectors (&gt;= 0.9.25), stats, KEGGREST"                                                                                                            
 AnnotationHub "utils, methods, grDevices, RSQLite, BiocManager, BiocVersion,\ncurl, rappdirs, AnnotationDbi (&gt;= 1.31.19), S4Vectors, httr,\nyaml, dplyr, interactiveDisplayBase"
-AsioHeaders   NA                                                                                                                                                                
-askpass       "sys (&gt;= 2.1)"                                                                                                                                                    
+aplot         "ggfun (&gt;= 0.1.3), ggplot2, ggplotify, patchwork, magrittr,\nmethods, utils"                                                                                      
               LinkingTo
 abind         NA       
+admisc        NA       
 annotate      NA       
 AnnotationDbi NA       
 AnnotationHub NA       
-AsioHeaders   NA       
-askpass       NA       
+aplot         NA       
               Suggests                                                                                                                                                                                                                                                                               
 abind         NA                                                                                                                                                                                                                                                                                     
+admisc        "QCA (&gt;= 3.7)"                                                                                                                                                                                                                                                                         
 annotate      "hgu95av2.db, genefilter, Biostrings (&gt;= 2.25.10), IRanges,\nrae230a.db, rae230aprobe, tkWidgets, GO.db, org.Hs.eg.db,\norg.Mm.eg.db, humanCHRLOC, Rgraphviz, RUnit,"                                                                                                                  
 AnnotationDbi "utils, hgu95av2.db, GO.db, org.Sc.sgd.db, org.At.tair.db,\nRUnit, TxDb.Hsapiens.UCSC.hg19.knownGene, org.Hs.eg.db,\nreactome.db, AnnotationForge, graph, EnsDb.Hsapiens.v75,\nBiocStyle, knitr"                                                                                       
 AnnotationHub "IRanges, GenomicRanges, GenomeInfoDb, VariantAnnotation,\nRsamtools, rtracklayer, BiocStyle, knitr, AnnotationForge,\nrBiopaxParser, RUnit, GenomicFeatures, MSnbase, mzR,\nBiostrings, CompoundDb, keras, ensembldb, SummarizedExperiment,\nExperimentHub, gdsfmt, rmarkdown, HubPub"
-AsioHeaders   NA                                                                                                                                                                                                                                                                                     
-askpass       "testthat"                                                                                                                                                                                                                                                                             
+aplot         "ggtree"                                                                                                                                                                                                                                                                               
               Enhances            License              License_is_FOSS
-abind         NA                  "LGPL (&gt;= 2)"        NA             
+abind         NA                  "MIT + file LICENSE" NA             
+admisc        NA                  "GPL (&gt;= 3)"         NA             
 annotate      NA                  "Artistic-2.0"       NA             
 AnnotationDbi NA                  "Artistic-2.0"       NA             
 AnnotationHub "AnnotationHubData" "Artistic-2.0"       NA             
-AsioHeaders   NA                  "BSL-1.0"            NA             
-askpass       NA                  "MIT + file LICENSE" NA             
+aplot         NA                  "Artistic-2.0"       NA             
               License_restricts_use OS_type MD5sum NeedsCompilation Built  
-abind         NA                    NA      NA     "no"             "4.3.0"
+abind         NA                    NA      NA     "no"             "4.3.3"
+admisc        NA                    NA      NA     "yes"            "4.3.3"
 annotate      NA                    NA      NA     "no"             "4.3.1"
 AnnotationDbi NA                    NA      NA     "no"             "4.3.1"
 AnnotationHub NA                    NA      NA     "yes"            "4.3.1"
-AsioHeaders   NA                    NA      NA     "no"             "4.3.0"
-askpass       NA                    NA      NA     "yes"            "4.3.0"</code></pre>
+aplot         NA                    NA      NA     "no"             "4.3.3"</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="do">## try also View(ip)</span></span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="do">## number of package</span></span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(ip)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 391</code></pre>
+<pre><code>[1] 439</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="do">## names of all installed packages</span></span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(ip)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  [1] "abind"                  "annotate"               "AnnotationDbi"         
-  [4] "AnnotationHub"          "AsioHeaders"            "askpass"               
-  [7] "backports"              "base"                   "base64enc"             
- [10] "beachmat"               "beeswarm"               "BH"                    
- [13] "Biobase"                "BiocFileCache"          "BiocGenerics"          
- [16] "BiocIO"                 "BiocManager"            "BiocParallel"          
- [19] "BiocStyle"              "BiocVersion"            "biomaRt"               
- [22] "Biostrings"             "bit"                    "bit64"                 
- [25] "bitops"                 "blob"                   "bookdown"              
- [28] "boot"                   "BPCells"                "brew"                  
- [31] "brio"                   "broom"                  "bslib"                 
- [34] "cachem"                 "callr"                  "caTools"               
- [37] "celldex"                "cellranger"             "checkmate"             
- [40] "circlize"               "class"                  "cli"                   
- [43] "clipr"                  "clock"                  "cluster"               
- [46] "codetools"              "colorout"               "colorspace"            
- [49] "commonmark"             "compiler"               "ComplexUpset"          
- [52] "conflicted"             "countdown"              "cowplot"               
- [55] "cpp11"                  "crayon"                 "credentials"           
- [58] "crosstalk"              "curl"                   "data.table"            
- [61] "datasets"               "DBI"                    "dbplyr"                
- [64] "DelayedArray"           "DelayedMatrixStats"     "deldir"                
- [67] "desc"                   "devtools"               "diagram"               
- [70] "dials"                  "DiceDesign"             "diffobj"               
- [73] "digest"                 "doFuture"               "dotCall64"             
- [76] "downlit"                "downloader"             "dplyr"                 
- [79] "dqrng"                  "DT"                     "dtplyr"                
- [82] "edgeR"                  "ellipsis"               "EnhancedVolcano"       
- [85] "evaluate"               "ExperimentHub"          "fansi"                 
- [88] "farver"                 "fastDummies"            "fastmap"               
- [91] "filelock"               "fitdistrplus"           "FNN"                   
- [94] "fontawesome"            "forcats"                "foreach"               
- [97] "foreign"                "formatR"                "Formula"               
-[100] "fs"                     "furrr"                  "futile.logger"         
-[103] "futile.options"         "future"                 "future.apply"          
-[106] "gargle"                 "genefilter"             "generics"              
-[109] "GeneSelectR"            "GenomeInfoDb"           "GenomeInfoDbData"      
-[112] "GenomicAlignments"      "GenomicRanges"          "gert"                  
-[115] "ggcorrplot"             "ggplot2"                "ggplot2movies"         
-[118] "ggrepel"                "ggridges"               "gh"                    
-[121] "gitcreds"               "glmGamPoi"              "glmnet"                
-[124] "GlobalOptions"          "globals"                "glue"                  
-[127] "goftest"                "googledrive"            "googlesheets4"         
-[130] "gower"                  "GPfit"                  "gplots"                
-[133] "graphics"               "grDevices"              "grid"                  
-[136] "gridExtra"              "gtable"                 "gtools"                
-[139] "hardhat"                "haven"                  "HDF5Array"             
-[142] "here"                   "hexbin"                 "highr"                 
-[145] "Hmisc"                  "hms"                    "htmlTable"             
-[148] "htmltools"              "htmlwidgets"            "httpuv"                
-[151] "httr"                   "httr2"                  "ica"                   
-[154] "ids"                    "igraph"                 "infer"                 
-[157] "ini"                    "interactiveDisplayBase" "interp"                
-[160] "ipred"                  "IRanges"                "irlba"                 
-[163] "isoband"                "iterators"              "jaffelab"              
-[166] "jpeg"                   "jquerylib"              "jsonlite"              
-[169] "KEGGREST"               "kernlab"                "KernSmooth"            
-[172] "knitr"                  "labeling"               "lambda.r"              
-[175] "later"                  "lattice"                "latticeExtra"          
-[178] "lava"                   "lazyeval"               "leiden"                
-[181] "lhs"                    "lifecycle"              "limma"                 
-[184] "listenv"                "lmtest"                 "locfit"                
-[187] "lubridate"              "magrittr"               "MASS"                  
-[190] "Matrix"                 "MatrixGenerics"         "matrixStats"           
-[193] "memoise"                "methods"                "mgcv"                  
-[196] "mime"                   "miniUI"                 "modeldata"             
-[199] "modelenv"               "modelr"                 "munsell"               
-[202] "nlme"                   "nnet"                   "numDeriv"              
-[205] "openssl"                "org.Hs.eg.db"           "packrat"               
-[208] "pagedown"               "pak"                    "parallel"              
-[211] "parallelly"             "parsnip"                "patchwork"             
-[214] "pbapply"                "pheatmap"               "pillar"                
-[217] "pkgbuild"               "pkgconfig"              "pkgdown"               
-[220] "pkgload"                "PKI"                    "plogr"                 
-[223] "plotly"                 "plotwidgets"            "plumber"               
-[226] "plyr"                   "png"                    "polyclip"              
-[229] "postcards"              "praise"                 "presto"                
-[232] "prettyunits"            "prismatic"              "processx"              
-[235] "prodlim"                "profvis"                "progress"              
-[238] "progressr"              "promises"               "prompt"                
-[241] "ps"                     "purrr"                  "qsvaR"                 
-[244] "R.methodsS3"            "R.oo"                   "R.utils"               
-[247] "R6"                     "rafalib"                "ragg"                  
-[250] "RANN"                   "rappdirs"               "rcmdcheck"             
-[253] "RColorBrewer"           "Rcpp"                   "RcppAnnoy"             
-[256] "RcppArmadillo"          "RcppEigen"              "RcppHNSW"              
-[259] "RcppProgress"           "RcppTOML"               "RCurl"                 
-[262] "readr"                  "readxl"                 "recipes"               
-[265] "rematch"                "rematch2"               "remotes"               
-[268] "renv"                   "reprex"                 "reshape2"              
-[271] "restfulr"               "reticulate"             "rhdf5"                 
-[274] "rhdf5filters"           "Rhdf5lib"               "Rhtslib"               
-[277] "rjson"                  "rlang"                  "rmarkdown"             
-[280] "ROCR"                   "roxygen2"               "rpart"                 
-[283] "rprojroot"              "rsample"                "Rsamtools"             
-[286] "rsconnect"              "RSpectra"               "RSQLite"               
-[289] "rstudioapi"             "rtracklayer"            "Rtsne"                 
-[292] "rversions"              "rvest"                  "S4Arrays"              
-[295] "S4Vectors"              "SASmixed"               "sass"                  
-[298] "scales"                 "scattermore"            "sctransform"           
-[301] "segmented"              "selectr"                "servr"                 
-[304] "sessioninfo"            "Seurat"                 "SeuratObject"          
-[307] "sfd"                    "sfsmisc"                "shape"                 
-[310] "shiny"                  "SingleCellExperiment"   "sitmo"                 
-[313] "slider"                 "snow"                   "sodium"                
-[316] "sourcetools"            "sp"                     "spam"                  
-[319] "SparseArray"            "sparseMatrixStats"      "spatial"               
-[322] "spatstat.data"          "spatstat.explore"       "spatstat.geom"         
-[325] "spatstat.random"        "spatstat.sparse"        "spatstat.univar"       
-[328] "spatstat.utils"         "splines"                "SQUAREM"               
-[331] "statmod"                "stats"                  "stats4"                
-[334] "stringi"                "stringr"                "SummarizedExperiment"  
-[337] "survival"               "sva"                    "swagger"               
-[340] "sys"                    "systemfonts"            "tagcloud"              
-[343] "TCGAbiolinks"           "TCGAbiolinksGUI.data"   "tcltk"                 
-[346] "tensor"                 "testthat"               "textshaping"           
-[349] "tibble"                 "tidymodels"             "tidyr"                 
-[352] "tidyselect"             "tidyverse"              "timechange"            
-[355] "timeDate"               "tinytex"                "tmod"                  
-[358] "tools"                  "tune"                   "tximport"              
-[361] "tzdb"                   "urlchecker"             "usethis"               
-[364] "utf8"                   "utils"                  "uuid"                  
-[367] "uwot"                   "vctrs"                  "viridis"               
-[370] "viridisLite"            "vroom"                  "waldo"                 
-[373] "warp"                   "webexercises"           "websocket"             
-[376] "webutils"               "whisker"                "withr"                 
-[379] "workflows"              "workflowsets"           "xfun"                  
-[382] "XML"                    "xml2"                   "xopen"                 
-[385] "xtable"                 "XVector"                "yaml"                  
-[388] "yardstick"              "zip"                    "zlibbioc"              
-[391] "zoo"                   </code></pre>
+<pre><code>  [1] "abind"                  "admisc"                 "annotate"              
+  [4] "AnnotationDbi"          "AnnotationHub"          "aplot"                 
+  [7] "AsioHeaders"            "askpass"                "assertthat"            
+ [10] "backports"              "base"                   "base64enc"             
+ [13] "bayesm"                 "beachmat"               "beeswarm"              
+ [16] "BH"                     "Biobase"                "BiocFileCache"         
+ [19] "BiocGenerics"           "BiocIO"                 "BiocManager"           
+ [22] "BiocParallel"           "BiocStyle"              "BiocVersion"           
+ [25] "biomaRt"                "Biostrings"             "bit"                   
+ [28] "bit64"                  "bitops"                 "blob"                  
+ [31] "bookdown"               "boot"                   "BPCells"               
+ [34] "brew"                   "brio"                   "broom"                 
+ [37] "BSDA"                   "bslib"                  "cachem"                
+ [40] "callr"                  "car"                    "carData"               
+ [43] "caTools"                "celldex"                "cellranger"            
+ [46] "checkmate"              "circlize"               "cisDynet"              
+ [49] "class"                  "cli"                    "clipr"                 
+ [52] "clock"                  "cluster"                "codetools"             
+ [55] "colorout"               "colorspace"             "commonmark"            
+ [58] "compiler"               "ComplexUpset"           "compositions"          
+ [61] "conflicted"             "corrplot"               "countdown"             
+ [64] "cowplot"                "cpp11"                  "crayon"                
+ [67] "credentials"            "crosstalk"              "curl"                  
+ [70] "data.table"             "datasets"               "DBI"                   
+ [73] "dbplyr"                 "DelayedArray"           "DelayedMatrixStats"    
+ [76] "deldir"                 "dendextend"             "DEoptimR"              
+ [79] "Deriv"                  "desc"                   "devtools"              
+ [82] "diagram"                "dials"                  "DiceDesign"            
+ [85] "diffobj"                "digest"                 "doBy"                  
+ [88] "doFuture"               "dotCall64"              "downlit"               
+ [91] "downloader"             "dplyr"                  "dqrng"                 
+ [94] "DT"                     "dtplyr"                 "e1071"                 
+ [97] "edgeR"                  "ellipsis"               "EnhancedVolcano"       
+[100] "evaluate"               "ExperimentHub"          "fansi"                 
+[103] "farver"                 "fastDummies"            "fastmap"               
+[106] "filelock"               "fitdistrplus"           "FNN"                   
+[109] "fontawesome"            "forcats"                "foreach"               
+[112] "foreign"                "formatR"                "Formula"               
+[115] "fs"                     "furrr"                  "futile.logger"         
+[118] "futile.options"         "future"                 "future.apply"          
+[121] "gargle"                 "genefilter"             "generics"              
+[124] "GeneSelectR"            "GenomeInfoDb"           "GenomeInfoDbData"      
+[127] "GenomicAlignments"      "GenomicRanges"          "gert"                  
+[130] "ggcorrplot"             "ggfortify"              "ggfun"                 
+[133] "ggplot2"                "ggplot2movies"          "ggplotify"             
+[136] "ggpubr"                 "ggrepel"                "ggridges"              
+[139] "ggsci"                  "ggsignif"               "ggtern"                
+[142] "gh"                     "gitcreds"               "glasso"                
+[145] "glmGamPoi"              "glmnet"                 "GlobalOptions"         
+[148] "globals"                "glue"                   "goftest"               
+[151] "googledrive"            "googlesheets4"          "gower"                 
+[154] "GPfit"                  "gplots"                 "graphics"              
+[157] "grDevices"              "grid"                   "gridExtra"             
+[160] "gridGraphics"           "gtable"                 "gtools"                
+[163] "hardhat"                "haven"                  "HDF5Array"             
+[166] "here"                   "hexbin"                 "highr"                 
+[169] "Hmisc"                  "hms"                    "htmlTable"             
+[172] "htmltools"              "htmlwidgets"            "httpuv"                
+[175] "httr"                   "httr2"                  "ica"                   
+[178] "ids"                    "igraph"                 "infer"                 
+[181] "ini"                    "interactiveDisplayBase" "interp"                
+[184] "ipred"                  "IRanges"                "irlba"                 
+[187] "isoband"                "iterators"              "jaffelab"              
+[190] "jpeg"                   "jquerylib"              "jsonlite"              
+[193] "KEGGREST"               "kernlab"                "KernSmooth"            
+[196] "knitr"                  "labeling"               "lambda.r"              
+[199] "later"                  "latex2exp"              "lattice"               
+[202] "latticeExtra"           "lava"                   "lazyeval"              
+[205] "leiden"                 "lhs"                    "lifecycle"             
+[208] "limma"                  "listenv"                "lme4"                  
+[211] "lmtest"                 "locfit"                 "lubridate"             
+[214] "magrittr"               "MASS"                   "Matrix"                
+[217] "MatrixGenerics"         "MatrixModels"           "matrixStats"           
+[220] "memoise"                "methods"                "mgcv"                  
+[223] "microbenchmark"         "mime"                   "miniUI"                
+[226] "minqa"                  "modeldata"              "modelenv"              
+[229] "modelr"                 "munsell"                "nlme"                  
+[232] "nloptr"                 "nnet"                   "numDeriv"              
+[235] "openssl"                "org.Hs.eg.db"           "packrat"               
+[238] "pagedown"               "pak"                    "paletteer"             
+[241] "parallel"               "parallelly"             "parsnip"               
+[244] "patchwork"              "pbapply"                "pbkrtest"              
+[247] "pheatmap"               "philentropy"            "pillar"                
+[250] "pkgbuild"               "pkgconfig"              "pkgdown"               
+[253] "pkgload"                "PKI"                    "plogr"                 
+[256] "plotly"                 "plotwidgets"            "plumber"               
+[259] "plyr"                   "png"                    "polyclip"              
+[262] "polynom"                "poorman"                "postcards"             
+[265] "praise"                 "presto"                 "prettyunits"           
+[268] "prismatic"              "processx"               "prodlim"               
+[271] "profvis"                "progress"               "progressr"             
+[274] "promises"               "prompt"                 "proto"                 
+[277] "proxy"                  "ps"                     "purrr"                 
+[280] "qsvaR"                  "quantreg"               "R.methodsS3"           
+[283] "R.oo"                   "R.utils"                "R6"                    
+[286] "rafalib"                "ragg"                   "RANN"                  
+[289] "rappdirs"               "rcmdcheck"              "RColorBrewer"          
+[292] "Rcpp"                   "RcppAnnoy"              "RcppArmadillo"         
+[295] "RcppEigen"              "RcppHNSW"               "RcppProgress"          
+[298] "RcppTOML"               "RCurl"                  "rdist"                 
+[301] "readr"                  "readxl"                 "recipes"               
+[304] "rematch"                "rematch2"               "remotes"               
+[307] "renv"                   "reprex"                 "reshape2"              
+[310] "restfulr"               "reticulate"             "rhdf5"                 
+[313] "rhdf5filters"           "Rhdf5lib"               "Rhtslib"               
+[316] "rjson"                  "rlang"                  "rlist"                 
+[319] "rmarkdown"              "robustbase"             "ROCR"                  
+[322] "roxygen2"               "rpart"                  "rprojroot"             
+[325] "rsample"                "Rsamtools"              "rsconnect"             
+[328] "RSpectra"               "RSQLite"                "rstatix"               
+[331] "rstudioapi"             "rtracklayer"            "Rtsne"                 
+[334] "rversions"              "rvest"                  "S4Arrays"              
+[337] "S4Vectors"              "SASmixed"               "sass"                  
+[340] "scales"                 "scattermore"            "sctransform"           
+[343] "segmented"              "selectr"                "servr"                 
+[346] "sessioninfo"            "Seurat"                 "SeuratObject"          
+[349] "sfd"                    "sfsmisc"                "shape"                 
+[352] "shiny"                  "SingleCellExperiment"   "sitmo"                 
+[355] "slider"                 "snow"                   "sodium"                
+[358] "sourcetools"            "sp"                     "spam"                  
+[361] "SparseArray"            "SparseM"                "sparseMatrixStats"     
+[364] "spatial"                "spatstat.data"          "spatstat.explore"      
+[367] "spatstat.geom"          "spatstat.random"        "spatstat.sparse"       
+[370] "spatstat.univar"        "spatstat.utils"         "splines"               
+[373] "SQUAREM"                "statmod"                "stats"                 
+[376] "stats4"                 "stringi"                "stringr"               
+[379] "SummarizedExperiment"   "survival"               "sva"                   
+[382] "swagger"                "sys"                    "systemfonts"           
+[385] "tagcloud"               "TCGAbiolinks"           "TCGAbiolinksGUI.data"  
+[388] "tcltk"                  "tensor"                 "tensorA"               
+[391] "testthat"               "textshaping"            "tibble"                
+[394] "tidymodels"             "tidyr"                  "tidyselect"            
+[397] "tidyverse"              "timechange"             "timeDate"              
+[400] "tinytex"                "tmod"                   "tools"                 
+[403] "tune"                   "tximport"               "tzdb"                  
+[406] "UpSetR"                 "urlchecker"             "usethis"               
+[409] "utf8"                   "utils"                  "uuid"                  
+[412] "uwot"                   "valr"                   "vctrs"                 
+[415] "venn"                   "viridis"                "viridisLite"           
+[418] "vroom"                  "waldo"                  "warp"                  
+[421] "webexercises"           "websocket"              "webutils"              
+[424] "whisker"                "withr"                  "workflows"             
+[427] "workflowsets"           "xfun"                   "XML"                   
+[430] "xml2"                   "xopen"                  "xtable"                
+[433] "XVector"                "yaml"                   "yardstick"             
+[436] "yulab.utils"            "zip"                    "zlibbioc"              
+[439] "zoo"                   </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="do">## type of information we have about each package</span></span>
 <span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(ip)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1203,9 +1243,9 @@ Note
 <pre><code>List of 5
  $ : int [1:10] 1 2 3 4 5 6 7 8 9 10
  $ : chr [1:26] "a" "b" "c" "d" ...
- $ : chr [1:391, 1:16] "abind" "annotate" "AnnotationDbi" "AnnotationHub" ...
+ $ : chr [1:439, 1:16] "abind" "admisc" "annotate" "AnnotationDbi" ...
   ..- attr(*, "dimnames")=List of 2
-  .. ..$ : chr [1:391] "abind" "annotate" "AnnotationDbi" "AnnotationHub" ...
+  .. ..$ : chr [1:439] "abind" "admisc" "annotate" "AnnotationDbi" ...
   .. ..$ : chr [1:16] "Package" "LibPath" "Version" "Priority" ...
  $ :'data.frame':   50 obs. of  2 variables:
   ..$ speed: num [1:50] 4 4 7 7 8 9 10 10 10 11 ...

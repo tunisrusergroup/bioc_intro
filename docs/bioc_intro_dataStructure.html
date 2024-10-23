@@ -9,7 +9,7 @@
 <meta name="author" content="The Carpenteries">
 <meta name="dcterms.date" content="2024-10-23">
 
-<title>Introduction to data analysis with R and Bioconductor – Introduction to Data Analysis with R and Bioconductor</title>
+<title>Introduction to data structure in R (suite) – Introduction to Data Analysis with R and Bioconductor</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -128,6 +128,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./bioc_intro_Introduction2R_solutions.html"> 
+<span class="menu-text">Introduction to R</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./bioc_intro_dataStructure_solutions.html"> 
 <span class="menu-text">Data Structure</span></a>
   </li>  
@@ -174,7 +178,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction to data analysis with R and Bioconductor</h1>
+<h1 class="title">Introduction to data structure in R (suite)</h1>
 </div>
 
 
@@ -203,6 +207,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Objectives</strong></p>
+<ul>
+<li><p>Describe what a <code>data.frame</code> is.</p></li>
+<li><p>Load external data from a .csv file into a data frame.</p></li>
+<li><p>Summarize the contents of a data frame.</p></li>
+<li><p>Describe what a factor is.</p></li>
+<li><p>Convert between strings and factors.</p></li>
+<li><p>Reorder and rename factors.</p></li>
+<li><p>Format dates.</p></li>
+<li><p>Export and save data.</p></li>
+</ul>
+</div>
+</div>
+</div>
 <section id="starting-with-data" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="starting-with-data"><span class="header-section-number">1</span> Starting with data</h2>
 <section id="presentation-of-the-gene-expression-data" class="level3" data-number="1.1">
@@ -810,9 +834,9 @@ Note
 <pre><code>List of 5
  $ : int [1:10] 1 2 3 4 5 6 7 8 9 10
  $ : chr [1:26] "a" "b" "c" "d" ...
- $ : chr [1:391, 1:16] "abind" "annotate" "AnnotationDbi" "AnnotationHub" ...
+ $ : chr [1:439, 1:16] "abind" "admisc" "annotate" "AnnotationDbi" ...
   ..- attr(*, "dimnames")=List of 2
-  .. ..$ : chr [1:391] "abind" "annotate" "AnnotationDbi" "AnnotationHub" ...
+  .. ..$ : chr [1:439] "abind" "admisc" "annotate" "AnnotationDbi" ...
   .. ..$ : chr [1:16] "Package" "LibPath" "Version" "Priority" ...
  $ :'data.frame':   50 obs. of  2 variables:
   ..$ speed: num [1:50] 4 4 7 7 8 9 10 10 10 11 ...
