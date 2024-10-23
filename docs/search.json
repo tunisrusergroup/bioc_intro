@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Introduction to Data Analysis with R and Bioconductor",
     "section": "",
-    "text": "Welcome to this Carpentries-style course designed to introduce you to the fundamentals of data analysis using R and Bioconductor. This course will guide you through working with data, manipulating it effectively, and visualizing it to gain insights in the context of bioinformatics."
+    "text": "Welcome to this Carpentries course designed to introduce you to the fundamentals of data analysis using R and Bioconductor. This course will guide you through working with data, manipulating it effectively, and visualizing it to gain insights in the context of bioinformatics."
   },
   {
     "objectID": "index.html#course-overview",
@@ -18,14 +18,14 @@
     "href": "index.html#learning-goals",
     "title": "Introduction to Data Analysis with R and Bioconductor",
     "section": "Learning Goals",
-    "text": "Learning Goals\nBy the end of this course, you will be able to:\n\nUnderstand and work with various data structures in R.\nPerform data manipulation tasks using dplyr and tidyverse tools.\nVisualize data using ggplot2 and understand how to interpret the results.\nUse Bioconductor packages to perform bioinformatics analyses."
+    "text": "Learning Goals\nBy the end of this course, you will be able to:\n\nUnderstand and work with various data structures in R.\nPerform data manipulation tasks using dplyr and tidyverse tools.\nVisualize data using ggplot2 and understand how to interpret the results.\nLearn how to install and use Bioconductor packages to perform bioinformatics analyses."
   },
   {
     "objectID": "index.html#prerequisites",
     "href": "index.html#prerequisites",
     "title": "Introduction to Data Analysis with R and Bioconductor",
     "section": "Prerequisites",
-    "text": "Prerequisites\nThis course assumes that participants:\n\nHave basic knowledge of bioinformatics (though not required).\nHave some familiarity with programming concepts, preferably with R."
+    "text": "Prerequisites\nThis course assumes that participants:\n\nHave basic knowledge of bioinformatics (though not required).\nHave some familiarity with programming concepts, preferably with R (though not required)."
   },
   {
     "objectID": "index.html#course-materials",

@@ -4,7 +4,7 @@ format: html
 editor: visual
 ---
 
-Welcome to this Carpentries-style course designed to introduce you to the fundamentals of data analysis using **R** and **Bioconductor**. This course will guide you through working with data, manipulating it effectively, and visualizing it to gain insights in the context of **bioinformatics**.
+Welcome to this Carpentries course designed to introduce you to the fundamentals of data analysis using **R** and **Bioconductor**. This course will guide you through working with data, manipulating it effectively, and visualizing it to gain insights in the context of **bioinformatics**.
 
 ## Course Overview
 
@@ -23,14 +23,14 @@ By the end of this course, you will be able to:
 -   Understand and work with various data structures in R.
 -   Perform data manipulation tasks using `dplyr` and `tidyverse` tools.
 -   Visualize data using `ggplot2` and understand how to interpret the results.
--   Use Bioconductor packages to perform bioinformatics analyses.
+-   Learn how to install and use Bioconductor packages to perform bioinformatics analyses.
 
 ## Prerequisites
 
 This course assumes that participants:
 
 -   Have basic knowledge of bioinformatics (though not required).
--   Have some familiarity with programming concepts, preferably with **R**.
+-   Have some familiarity with programming concepts, preferably with **R** (though not required).
 
 ## Course Materials
 
