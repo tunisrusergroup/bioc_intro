@@ -12,7 +12,7 @@ output: html
 editor: visual
 ---
 
-:::{.callout}
+::: callout
 **Objectives**
 
 -   Describe what a `data.frame` is.
@@ -30,7 +30,6 @@ editor: visual
 -   Format dates.
 
 -   Export and save data.
-
 :::
 
 ## Starting with data
@@ -56,47 +55,10 @@ The dataset is stored as a comma-separated values (CSV) file. Each row holds inf
 | mouse | The mouse unique identifier. |
 
 ```{r}
-#| label: load-library
-#| output: false
-# Load library here
-library(here)
-```
-
-```{r}
-#| label: load-data
-#| output: false
-# Define the full path for the destination file
-dest_path <- here("data", "rnaseq.csv")
-
-# Create the directory structure if it does not exist
-ifelse(
-  !dir.exists(dirname(dest_path)),
-  {
-    dir.create(dirname(dest_path), recursive = TRUE, showWarnings = FALSE)
-    "Directory Created"
-  },
-  "Directory Exists"
-)
-
-# Download the file if it does not exist
-ifelse(
-  !file.exists(dest_path),
-  {
-    download.file(
-      url = "https://github.com/carpentries-incubator/bioc-intro/raw/main/episodes/data/rnaseq.csv",
-      destfile = dest_path
-    )
-    "File Downloaded"
-  },
-  "File Exists"
-)
-```
-
-```{r}
 #| label: read-data
 #| output: false
 # Load the CSV file
-rna <- read.csv(dest_path)
+rna <- read.csv("data/rnaseq.csv")
 # Have a look at the CSV file
 rna
 ```
