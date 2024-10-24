@@ -9,13 +9,13 @@ website:
       - text: "Home"
         href: index.qmd
       - text: "Introduction to R"
-        href: bioc_intro_Introduction2R_solutions.qmd 
-      - text: "Data Structure"
-        href: bioc_intro_dataStructure_solutions.qmd
-      - text: "Data Manipulation"
-        href: bioc_intro_dataManipulation_solutions.qmd
-      - text: "Data Visualization"
-        href: bioc_intro_dataVisualization_solutions.qmd
+        href: 1.bioc_intro_Introduction2R_solutions.qmd 
+      - text: "Intro to R (suite)"
+        href: 2.bioc_intro_Intro2R_2_solutions.qmd
+      - text: "Data Manipulation with dplyr"
+        href: 3.bioc_intro_DataManipulation_solutions.qmd
+      - text: "Data Visualization with ggplot2"
+        href: 4.bioc_intro_DataVisualization_solutions.qmd
 format:
   html:
     toc: true  # Enables table of contents for each page
