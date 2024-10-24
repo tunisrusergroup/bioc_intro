@@ -362,6 +362,10 @@ The [Dates as data](https://datacarpentry.org/spreadsheet-ecology-lesson/03-date
 
 We are going to use the `ymd()` function from the package **`lubridate`** (which belongs to the **`tidyverse`**; learn more [here](https://www.tidyverse.org/)). . **`lubridate`** gets installed as part of the **`tidyverse`** installation. When you load the **`tidyverse`** ([`library(tidyverse)`](https://tidyverse.tidyverse.org/)), the core packages (the packages used in most data analyses) get loaded. **`lubridate`** however does not belong to the core tidyverse, so you have to load it explicitly with [`library(lubridate)`](https://lubridate.tidyverse.org/).
 
+```{r}
+install.packages("lubridate")
+```
+
 Start by loading the required package:
 
 ```{r}
@@ -479,8 +483,8 @@ l[1]   ## a list of length 1
 We have seen how to read a text-based spreadsheet into R using the `read.table` family of functions. To export a `data.frame` to a text-based spreadsheet, we can use the `write.table` set of functions (`write.csv`, `write.delim`, …). They all take the variable to be exported and the file to be exported to. For example, to export the `rna` data to the `my_rna.csv` file in the `data_output` directory, we would execute:
 
 ```{r}
-dir.create(here("data_output"))
-write.csv(rna, file = here("data_output/my_rna.csv"))
+dir.create("data_output")
+write.csv(rna, file = "data_output/my_rna.csv")
 ```
 
 This new csv file can now be shared with other collaborators who aren’t familiar with R. Note that even though there are commas in some of the fields in the `data.frame` (see for example the “product” column), R will by default surround each field with quotes, and thus we will be able to read it back into R correctly, despite also using commas as column separators.

@@ -41,7 +41,7 @@ This course assumes that participants:
 ## Course Outline
 
 | Day | Time | Session |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | **Day 1** | **Morning** | Data organisation with spreadsheets, R and RStudio, Introduction to R |
 |  | **Afternoon** | Introduction to R (suite), Data Manipulation with dplyr |
 | **Day 2** | **Morning** | Data Manipulation with dplyr, Data Visualization with ggplot2 |
