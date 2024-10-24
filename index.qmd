@@ -41,7 +41,7 @@ This course assumes that participants:
 ## Course Outline
 
 | Day | Time | Session |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | **Day 1** | **Morning** | Data organisation with spreadsheets, R and RStudio, [Introduction to R](bioc_intro_Introduction2R_solutions.qmd) |
 |  | **Afternoon** | [Data Structure](bioc_intro_dataStructure_solutions.qmd), [Data Manipulation](bioc_intro_dataManipulation_solutions.qmd) |
 | **Day 2** | **Morning** | [Data Manipulation, Data Visualization](bioc_intro_dataManipulation_solutions.qmd) |

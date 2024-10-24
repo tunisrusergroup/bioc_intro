@@ -12,6 +12,19 @@ output: html
 editor: visual
 ---
 
+::: {.callout}
+**Objectives**
+
+-   Describe the purpose of the **`dplyr`** and **`tidyr`** packages.
+
+-   Describe several of their functions that are extremely useful to manipulate data.
+
+-   Describe the concept of a wide and a long table format, and see how to reshape a data frame from one format to the other one.
+
+-   Demonstrate how to join tables.
+
+:::
+
 ## **Data manipulation using `dplyr` and `tidyr`**
 
 Bracket subsetting is handy, but it can be cumbersome and difficult to read, especially for complicated operations.
