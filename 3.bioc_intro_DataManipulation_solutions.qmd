@@ -12,7 +12,7 @@ output: html
 editor: visual
 ---
 
-::: {.callout}
+::: callout
 **Objectives**
 
 -   Describe the purpose of the **`dplyr`** and **`tidyr`** packages.
@@ -22,7 +22,6 @@ editor: visual
 -   Describe the concept of a wide and a long table format, and see how to reshape a data frame from one format to the other one.
 
 -   Demonstrate how to join tables.
-
 :::
 
 ## **Data manipulation using `dplyr` and `tidyr`**
@@ -395,9 +394,34 @@ How many genes were analysed in each sample?
 # Answer
 
 ```{r}
-
+## 1.
 rna %>%
   count(sample)
+```
+
+```{r}
+## 2.
+rna %>% 
+  group_by(sample) %>% 
+  summarise(seq_depth= sum(expression)) %>% 
+  arrange(desc(seq_depth))
+```
+
+```{r}
+## 3.
+rna %>% 
+  filter(sample == "GSM2545336") %>% 
+  count(gene_biotype) %>% 
+  arrange(desc(n))
+```
+
+```{r}
+## 4. 
+rna %>% 
+  filter(phenotype_description == "abnormal DNA methylation") %>% 
+  group_by(gene,time) %>% 
+  summarise(mean_expression = mean(log(expression))) %>% 
+  arrange()
 ```
 :::
 
