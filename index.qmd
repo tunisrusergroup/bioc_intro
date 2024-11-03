@@ -34,17 +34,18 @@ This course assumes that participants:
 
 ## Course Materials
 
--   [Course Repository (GitHub)](https://github.com/your-repo-link) – Contains all the materials and code examples used in this course.
+-   [Course](https://github.com/tunisrusergroup/bioc_intro)[ Repository (GitHub)](https://github.com/your-repo-link) – Contains all the materials and code examples used in this course.
 -   Datasets for the course will be provided within the lessons.
 -   Additional reading: [R for Data Science](https://r4ds.had.co.nz/) and [Bioconductor Documentation](https://bioconductor.org/docs/).
+-   [Posit cheatsheets](https://posit.co/resources/cheatsheets/)
 
 ## Course Outline
 
 | Day | Time | Session |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | **Day 1** | **Morning** | Data organisation with spreadsheets, R and RStudio, Introduction to R |
 |  | **Afternoon** | Introduction to R (suite), Data Manipulation with dplyr |
-| **Day 2** | **Morning** | Data Manipulation with dplyr, Data Visualization with ggplot2 |
+| **Day 2** | **Morning** | Data Manipulation with dplyr |
 |  | **Afternoon** | Data Visualization with ggplot2 |
 
 ## Contact

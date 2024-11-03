@@ -32,14 +32,14 @@
     "href": "index.html#course-materials",
     "title": "Introduction to Data Analysis with R and Bioconductor",
     "section": "Course Materials",
-    "text": "Course Materials\n\nCourse Repository (GitHub) – Contains all the materials and code examples used in this course.\nDatasets for the course will be provided within the lessons.\nAdditional reading: R for Data Science and Bioconductor Documentation."
+    "text": "Course Materials\n\nCourseRepository (GitHub) – Contains all the materials and code examples used in this course.\nDatasets for the course will be provided within the lessons.\nAdditional reading: R for Data Science and Bioconductor Documentation.\nPosit cheatsheets"
   },
   {
     "objectID": "index.html#course-outline",
     "href": "index.html#course-outline",
     "title": "Introduction to Data Analysis with R and Bioconductor",
     "section": "Course Outline",
-    "text": "Course Outline\n\n\n\n\n\n\n\n\nDay\nTime\nSession\n\n\n\n\nDay 1\nMorning\nData organisation with spreadsheets, R and RStudio, Introduction to R\n\n\n\nAfternoon\nIntroduction to R (suite), Data Manipulation with dplyr\n\n\nDay 2\nMorning\nData Manipulation with dplyr, Data Visualization with ggplot2\n\n\n\nAfternoon\nData Visualization with ggplot2"
+    "text": "Course Outline\n\n\n\n\n\n\n\n\nDay\nTime\nSession\n\n\n\n\nDay 1\nMorning\nData organisation with spreadsheets, R and RStudio, Introduction to R\n\n\n\nAfternoon\nIntroduction to R (suite), Data Manipulation with dplyr\n\n\nDay 2\nMorning\nData Manipulation with dplyr\n\n\n\nAfternoon\nData Visualization with ggplot2"
   },
   {
     "objectID": "index.html#contact",
