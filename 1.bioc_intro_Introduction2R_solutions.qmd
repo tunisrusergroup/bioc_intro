@@ -1,6 +1,6 @@
 ---
 title: "Introduction to data structure in R"
-author: "The Carpenteries"
+author: "Bioconductor - The Carpenteries"
 format: html
 editor: visual
 ---

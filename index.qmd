@@ -4,7 +4,7 @@ format: html
 editor: visual
 ---
 
-Welcome to this Carpentries course designed to introduce you to the fundamentals of data analysis using **R** and **Bioconductor**. This course will guide you through working with data, manipulating it effectively, and visualizing it to gain insights in the context of **bioinformatics**.
+Welcome to this **Bioconductor - The Carpentries** course designed to introduce you to the fundamentals of data analysis using **R** and **Bioconductor**. This course will guide you through working with data, manipulating it effectively, and visualizing it to gain insights in the context of **bioinformatics**.
 
 ## Course Overview
 
@@ -34,7 +34,7 @@ This course assumes that participants:
 
 ## Course Materials
 
--   [Course](https://github.com/tunisrusergroup/bioc_intro)[ Repository (GitHub)](https://github.com/your-repo-link) – Contains all the materials and code examples used in this course.
+-   [Course GitHub](https://github.com/tunisrusergroup/bioc_intro) – Contains all the materials and code examples used in this course.
 -   Datasets for the course will be provided within the lessons.
 -   Additional reading: [R for Data Science](https://r4ds.had.co.nz/) and [Bioconductor Documentation](https://bioconductor.org/docs/).
 -   [Posit cheatsheets](https://posit.co/resources/cheatsheets/)

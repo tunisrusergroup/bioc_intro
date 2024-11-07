@@ -1,6 +1,6 @@
 ---
 title: "Data Visualization using ggplot2"
-author: "The Carpenteries"
+author: "Bioconductor - The Carpenteries"
 date: "`r format(Sys.Date(), '%Y-%m-%d')`"
 format:
   html: 
@@ -12,7 +12,7 @@ output: html
 editor: visual
 ---
 
-:::{.callout}
+::: callout
 **Objectives**
 
 -   Produce scatter plots, boxplots, line plots, etc. using ggplot.
@@ -24,7 +24,6 @@ editor: visual
 -   Modify the aesthetics of an existing ggplot plot (including axis labels and color).
 
 -   Build complex and customized plots from data in a data frame.
-
 :::
 
 ## **Data Visualization**

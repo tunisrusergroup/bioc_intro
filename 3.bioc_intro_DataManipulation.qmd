@@ -1,6 +1,6 @@
 ---
 title: "Manipulating and analysing data with dplyr"
-author: "The Carpenteries"
+author: "Bioconductor - The Carpenteries"
 date: "`r format(Sys.Date(), '%Y-%m-%d')`"
 format:
   html: 
@@ -12,7 +12,7 @@ output: html
 editor: visual
 ---
 
-::: {.callout}
+::: callout
 **Objectives**
 
 -   Describe the purpose of the **`dplyr`** and **`tidyr`** packages.
@@ -22,7 +22,6 @@ editor: visual
 -   Describe the concept of a wide and a long table format, and see how to reshape a data frame from one format to the other one.
 
 -   Demonstrate how to join tables.
-
 :::
 
 ## **Data manipulation using `dplyr` and `tidyr`**

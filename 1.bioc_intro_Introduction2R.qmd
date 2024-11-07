@@ -1,12 +1,11 @@
 ---
 title: "Introduction to R"
-author: "The Carpenteries"
+author: "Bioconductor - The Carpenteries"
 format: html
 editor: visual
 ---
 
-:::{.callout}
-
+::: callout
 **Objectives**
 
 -   Define the following terms as they relate to R: object, assign, call, function, arguments, options.
@@ -26,7 +25,6 @@ editor: visual
 -   Subset and extract values from vectors.
 
 -   Analyze vectors with missing data.
-
 :::
 
 ## **Creating objects in R**
